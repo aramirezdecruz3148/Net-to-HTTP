@@ -1,0 +1,29 @@
+{
+  "name": "Net-to-HTTP",
+  "version": "1.0.0",
+  "description": "Using only the net module create an HTTP server that responds with different messages based on path.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:watch": "nodemon index.js",
+    "test": "jest --verbose --runInBand",
+    "test:watch": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aramirezdecruz3148/Net-to-HTTP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aramirezdecruz3148/Net-to-HTTP/issues"
+  },
+  "homepage": "https://github.com/aramirezdecruz3148/Net-to-HTTP#readme",
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
+  }
+}
