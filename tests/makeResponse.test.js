@@ -8,7 +8,7 @@ describe('makeResponse function', () => {
 Date: ${new Date()}
 Server: Apache
 Accept-Ranges: bytes
-Content-Length: Buffer.from2
+Content-Length: 2
 Content-Type: text/plain
 
 hi`);

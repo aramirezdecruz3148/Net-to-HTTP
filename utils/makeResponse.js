@@ -5,7 +5,7 @@ function makeResponse(statusCode, data, contentType) {
 Date: ${date}
 Server: Apache
 Accept-Ranges: bytes
-Content-Length: Buffer.from${data.length}
+Content-Length: ${Buffer.from(data).length}
 Content-Type: text/${contentType}
 
 ${data}`;
