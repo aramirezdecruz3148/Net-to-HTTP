@@ -9,8 +9,6 @@ Content-Length: Buffer.from${data.length}
 Content-Type: text/${contentType}
 
 ${data}`;
-
-  //need to pass date in
 }
 
 module.exports = {
