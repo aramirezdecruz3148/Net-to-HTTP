@@ -22,10 +22,28 @@ describe('able to parse request and send response from server', () => {
 
   it('able to parse request and send response for GET /red', () => {
     return request(app)
-      .post('/red')
+      .get('/red')
       .then(res => {
         expect(res.status).toEqual(200);
         expect(res.text).toEqual(expect.stringContaining('Red'));
+      });
+  });
+
+  it('able to parse request and send response for GET /green', () => {
+    return request(app)
+      .get('/green')
+      .then(res => {
+        expect(res.status).toEqual(200);
+        expect(res.text).toEqual(expect.stringContaining('Green'));
+      });
+  });
+
+  it('able to parse request and send response for GET /blue', () => {
+    return request(app)
+      .get('/blue')
+      .then(res => {
+        expect(res.status).toEqual(200);
+        expect(res.text).toEqual(expect.stringContaining('Blue'));
       });
   });
 });

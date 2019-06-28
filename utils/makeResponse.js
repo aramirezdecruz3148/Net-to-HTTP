@@ -6,7 +6,7 @@ Date: ${date}
 Server: Apache
 Accept-Ranges: bytes
 Content-Length: ${Buffer.from(data).length}
-Content-Type: text/${contentType}
+Content-Type: ${contentType}
 
 ${data}`;
 }
