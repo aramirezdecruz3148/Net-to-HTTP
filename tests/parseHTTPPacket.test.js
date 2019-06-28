@@ -14,4 +14,11 @@ describe('testing makeHTTPPacket', () => {
     expect(method).toEqual('POST');
     expect(path).toEqual('/');
   });
+
+  it('returns both method(GET) and path(/green)', () => {
+    const string = 'GET /green ';
+    const { method, path } = parseHTTPPacket(string);
+    expect(method).toEqual('GET');
+    expect(path).toEqual('/green');
+  });
 });
