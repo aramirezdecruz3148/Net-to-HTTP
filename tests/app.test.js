@@ -19,4 +19,13 @@ describe('able to parse request and send response from server', () => {
         expect(res.text).toEqual(expect.stringContaining('sorry'));
       });
   });
+
+  it('able to parse request and send response for GET /red', () => {
+    return request(app)
+      .post('/red')
+      .then(res => {
+        expect(res.status).toEqual(200);
+        expect(res.text).toEqual(expect.stringContaining('Red'));
+      });
+  });
 });
