@@ -59,4 +59,13 @@ describe('able to parse request and send response from server', () => {
         });
       });
   });
+
+  it('any other case will return an error', () => {
+    return request(app)
+      .get('/thingy')
+      .then(res => {
+        expect(res.status).toEqual(404);
+        expect(res.text).toEqual(expect.stringContaining('Not Found'));
+      });
+  });
 });
