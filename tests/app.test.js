@@ -46,4 +46,17 @@ describe('able to parse request and send response from server', () => {
         expect(res.text).toEqual(expect.stringContaining('Blue'));
       });
   });
+
+  it('able to parse request and send response for JSON object', () => {
+    return request(app)
+      .get('/dog')
+      .then(res => {
+        expect(res.status).toEqual(200);
+        expect(res.body).toEqual({
+          name: 'Pennie',
+          age: 8,
+          weight: 14
+        });
+      });
+  });
 });
